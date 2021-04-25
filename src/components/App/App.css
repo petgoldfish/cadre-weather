@@ -1,7 +1,8 @@
 :root {
-  --primary: #0097a7;
+  --brand: #0097a7;
+  --primary: #00bcd4;
   --secondary: #b2ebf2;
-  --primary-text: #212121;
+  --primary-text: whitesmoke;
   --secondary-text: #757575;
   --accent: #ffc107;
   --error: tomato;
@@ -9,4 +10,36 @@
   --rounding: 8px;
   --space: 16px;
   --space-s: 8px;
+}
+
+.App {
+  align-items: center;
+  height: 100vh;
+  background-color: var(--primary-text);
+  color: var(--primary-text);
+}
+
+.main {
+  width: 768px;
+  flex: 1;
+  margin-top: var(--space);
+  margin-bottom: var(--space);
+  min-height: 0;
+}
+
+.card {
+  background-color: var(--primary);
+  border: none;
+  box-shadow: var(--shadow);
+  border-radius: var(--rounding);
+  padding: var(--space);
+  margin-bottom: var(--space);
+}
+
+.card--secondary {
+  background-color: var(--secondary);
+}
+
+.card--no-shadow {
+  box-shadow: none;
 }

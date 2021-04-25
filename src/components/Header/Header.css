@@ -2,7 +2,7 @@
   align-self: stretch;
   display: flex;
   align-items: center;
-  background-color: var(--primary);
+  background-color: var(--brand);
   box-shadow: var(--shadow);
 }
 
