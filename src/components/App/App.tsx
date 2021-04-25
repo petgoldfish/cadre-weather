@@ -2,6 +2,8 @@ import Header from "../Header/Header";
 import Hourly from "../Hourly/Hourly";
 import Location from "../Location/Location";
 import Weekly from "../Weekly/Weekly";
+import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@reach/tabs";
+import "@reach/tabs/styles.css";
 import "./App.css";
 
 function App() {
@@ -10,8 +12,20 @@ function App() {
       <Header />
       <main className="main flex-column">
         <Location />
-        <Hourly />
-        <Weekly />
+        <Tabs className="card">
+          <TabList>
+            <Tab>Hourly Forecast</Tab>
+            <Tab>Weekly Forecast</Tab>
+          </TabList>
+          <TabPanels>
+            <TabPanel>
+              <Hourly />
+            </TabPanel>
+            <TabPanel>
+              <Weekly />
+            </TabPanel>
+          </TabPanels>
+        </Tabs>
       </main>
     </div>
   );

@@ -28,7 +28,7 @@
 }
 
 .card {
-  background-color: var(--primary);
+  background-color: var(--brand);
   border: none;
   box-shadow: var(--shadow);
   border-radius: var(--rounding);
@@ -42,4 +42,17 @@
 
 .card--no-shadow {
   box-shadow: none;
+}
+
+[data-reach-tab-list] {
+  background: var(--brand);
+  margin-bottom: var(--space);
+}
+
+[data-reach-tab] {
+  flex: 1;
+}
+
+[data-reach-tab][data-selected] {
+  border-bottom-color: var(--accent);
 }
