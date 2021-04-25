@@ -1,0 +1,12 @@
+:root {
+  --primary: #0097a7;
+  --secondary: #b2ebf2;
+  --primary-text: #212121;
+  --secondary-text: #757575;
+  --accent: #ffc107;
+  --error: tomato;
+  --shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.5);
+  --rounding: 8px;
+  --space: 16px;
+  --space-s: 8px;
+}
