@@ -1,8 +1,9 @@
-import { useState, ReactElement, useEffect } from "react";
+import { useState, ReactElement, useEffect, useContext } from "react";
 import GooglePlacesAutocomplete, {
   geocodeByAddress,
   getLatLng,
 } from "react-google-places-autocomplete";
+import { LocationContext } from "../../context/LocationContext";
 import "./Location.css";
 
 interface Loc {
@@ -12,23 +13,25 @@ interface Loc {
 function Location(): ReactElement {
   const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY!;
 
-  const [location, setLocation] = useState<Loc>();
+  const { handleLocation } = useContext(LocationContext);
+
+  const [loc, setLoc] = useState<Loc>();
 
   useEffect(() => {
-    if (location) {
-      geocodeByAddress(location.label)
+    if (loc) {
+      geocodeByAddress(loc.label)
         .then((results) => getLatLng(results[0]))
-        .then(({ lat, lng }) => console.log(lat, lng));
+        .then(({ lat, lng }) => handleLocation({ lat, lng }));
     }
-  }, [location]);
+  }, [loc]);
 
   return (
     <GooglePlacesAutocomplete
       apiKey={API_KEY}
       debounce={300}
       selectProps={{
-        value: location,
-        onChange: setLocation,
+        value: loc,
+        onChange: setLoc,
         placeholder: "Enter Location...",
         styles: {
           container: (provided: any) => ({
