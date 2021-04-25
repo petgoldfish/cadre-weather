@@ -20,7 +20,6 @@ const LocationContextProvider: React.FC = ({ children }) => {
 
   const handleLocation = (location: Location) => {
     setLocation(location);
-    console.log("context", location);
   };
 
   return (
