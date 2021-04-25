@@ -1,4 +1,5 @@
 .tabs {
+  color: var(--primary-text);
   margin-right: var(--space);
   margin-left: var(--space);
 }

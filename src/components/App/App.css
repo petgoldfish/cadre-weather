@@ -16,7 +16,6 @@
   align-items: center;
   min-height: 100vh;
   background-color: var(--primary-text);
-  color: var(--primary-text);
 }
 
 .main {
