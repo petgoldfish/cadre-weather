@@ -1,0 +1,10 @@
+.periods {
+  padding: var(--space);
+  overflow: auto;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .periods {
+    flex-direction: column;
+  }
+}

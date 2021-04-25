@@ -1,0 +1,15 @@
+.single {
+  margin-right: var(--space);
+}
+
+.single p {
+  display: flex;
+  align-items: center;
+  margin-top: var(--space-s);
+  margin-bottom: 0;
+}
+
+.single small {
+  display: flex;
+  align-self: center;
+}

@@ -20,7 +20,7 @@
 }
 
 .main {
-  width: 768px;
+  width: 800px;
   flex: 1;
   margin-top: var(--space);
   margin-bottom: var(--space);
@@ -55,4 +55,10 @@
 
 [data-reach-tab][data-selected] {
   border-bottom-color: var(--accent);
+}
+
+@media only screen and (max-device-width: 480px) {
+  .main {
+    width: 100%;
+  }
 }

@@ -4,7 +4,6 @@ import GooglePlacesAutocomplete, {
   getLatLng,
 } from "react-google-places-autocomplete";
 import { LocationContext } from "../../context/LocationContext";
-import "./Location.css";
 
 interface Loc {
   label: string;
@@ -37,6 +36,8 @@ function Location(): ReactElement {
           container: (provided: any) => ({
             ...provided,
             marginBottom: 16,
+            marginLeft: 16,
+            marginRight: 16,
           }),
         },
       }}

@@ -2,6 +2,7 @@ import { ReactElement, useContext, useEffect, useState } from "react";
 import Periods from "../Periods/Periods";
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@reach/tabs";
 import { LocationContext } from "../../context/LocationContext";
+import "./Weather.css";
 
 function Weather(): ReactElement {
   const { location } = useContext(LocationContext);
@@ -31,7 +32,7 @@ function Weather(): ReactElement {
   }, [location]);
 
   return (
-    <Tabs className="card flex-column">
+    <Tabs className="card flex-column tabs">
       <TabList>
         <Tab>Hourly Forecast</Tab>
         <Tab>Weekly Forecast</Tab>
