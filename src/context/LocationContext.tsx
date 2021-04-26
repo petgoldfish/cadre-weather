@@ -1,8 +1,9 @@
 import React, { createContext, useState } from "react";
 
-interface Location {
+export interface Location {
   lat: number;
   lng: number;
+  address: string;
 }
 
 interface LocationContextType {

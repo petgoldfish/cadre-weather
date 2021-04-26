@@ -1,0 +1,15 @@
+.favorites {
+  margin-left: var(--space);
+  margin-right: var(--space);
+  color: var(--primary-text);
+}
+
+.favorites__title {
+  margin-top: 0;
+}
+
+.favorite:hover {
+  background-color: var(--secondary);
+  color: var(--secondary-text);
+  cursor: pointer;
+}
