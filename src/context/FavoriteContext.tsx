@@ -3,18 +3,19 @@ import { Location } from "./LocationContext";
 
 interface FavoriteContextType {
   favorites: Array<Location>;
-  handleFavourite: Function;
+  handleFavorite: Function;
 }
 
 export const FavoriteContext = createContext<FavoriteContextType>({
   favorites: [],
-  handleFavourite: (favorite: Location) => {},
+  handleFavorite: (favorite: Location) => {},
 });
 
+// Favorites store
 const FavoriteContextProvider: React.FC = ({ children }) => {
   const [favorites, setFavorites] = useState<Array<Location>>([]);
 
-  function handleFavourite(favorite: Location) {
+  function handleFavorite(favorite: Location) {
     const updatedFavs = [...favorites, favorite];
     setFavorites(updatedFavs);
     localStorage.setItem("favorites", JSON.stringify(updatedFavs));
@@ -25,12 +26,13 @@ const FavoriteContextProvider: React.FC = ({ children }) => {
     setFavorites(favorites);
   }
 
+  // load favourites only on initial component load
   useEffect(() => {
     loadFavorites();
   }, []);
 
   return (
-    <FavoriteContext.Provider value={{ favorites, handleFavourite }}>
+    <FavoriteContext.Provider value={{ favorites, handleFavorite }}>
       {children}
     </FavoriteContext.Provider>
   );

@@ -44,20 +44,6 @@
   box-shadow: none;
 }
 
-[data-reach-tab-list] {
-  background: var(--brand);
-  margin-bottom: var(--space);
-}
-
-[data-reach-tab] {
-  flex: 1;
-  font-weight: bold;
-}
-
-[data-reach-tab][data-selected] {
-  border-bottom-color: var(--accent);
-}
-
 @media only screen and (max-device-width: 480px) {
   .main {
     width: 100%;

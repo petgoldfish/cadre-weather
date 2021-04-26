@@ -1,11 +1,10 @@
 import Header from "../Header/Header";
 import Location from "../Location/Location";
-import "@reach/tabs/styles.css";
-import "./App.css";
-import LocationContextProvider from "../../context/LocationContext";
-import Weather from "../Weather/Weather";
 import Favorites from "../Favorites/Favorites";
+import Weather from "../Weather/Weather";
+import LocationContextProvider from "../../context/LocationContext";
 import FavoriteContextProvider from "../../context/FavoriteContext";
+import "./App.css";
 
 function App() {
   return (
@@ -17,6 +16,7 @@ function App() {
             <Location />
             <Favorites />
           </FavoriteContextProvider>
+          {/* The actual weather component does not need to know the favourites */}
           <Weather />
         </LocationContextProvider>
       </main>

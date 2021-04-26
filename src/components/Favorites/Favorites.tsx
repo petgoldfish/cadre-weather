@@ -12,6 +12,7 @@ function Favorites(): ReactElement {
       <h3 className="favorites__title">Favorites</h3>
       {favorites.map((favorite, index) => (
         <p
+          // highlight if the current location is a favourite
           className={
             "favorite card " +
             (favorite.address !== location?.address

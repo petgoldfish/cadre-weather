@@ -3,6 +3,7 @@
   overflow: auto;
 }
 
+/* show vertical list on phones */
 @media only screen and (max-device-width: 480px) {
   .periods {
     flex-direction: column;

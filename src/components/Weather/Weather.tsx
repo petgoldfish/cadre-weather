@@ -1,15 +1,18 @@
 import { ReactElement, useContext, useEffect, useState } from "react";
-import Periods from "../Periods/Periods";
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@reach/tabs";
 import { LocationContext } from "../../context/LocationContext";
+import Periods from "../Periods/Periods";
+import "@reach/tabs/styles.css";
 import "./Weather.css";
 
+// Main tabbed UI
 function Weather(): ReactElement {
   const { location } = useContext(LocationContext);
 
   const [hourly, setHourly] = useState(null);
   const [weekly, setWeekly] = useState(null);
 
+  // Fetch new data every time the selected location changes
   useEffect(() => {
     if (location) {
       fetch(`https://api.weather.gov/points/${location.lat},${location.lng}`)

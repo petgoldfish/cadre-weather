@@ -36,6 +36,7 @@ function Single({
     isDaytime,
   },
 }: Props): ReactElement {
+  // Set icon appropriate for the weather
   const forecastIcon = shortForecast.includes("Cloudy") ? (
     <WiCloudy size="3em" />
   ) : shortForecast.includes("Sunny") ? (

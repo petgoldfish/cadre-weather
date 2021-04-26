@@ -2,11 +2,11 @@ import { ReactElement } from "react";
 import Single from "../Single/Single";
 import "./Periods.css";
 
-interface PropTypes {
+interface Props {
   data: Array<any> | null;
 }
 
-function Periods({ data }: PropTypes): ReactElement {
+function Periods({ data }: Props): ReactElement {
   return !data ? (
     <div>Select a location to display its forecast.</div>
   ) : (
