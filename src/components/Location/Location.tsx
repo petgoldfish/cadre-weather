@@ -31,7 +31,7 @@ function Location(): ReactElement {
   }, [address]);
 
   return (
-    <div className="search">
+    <div className="search flex">
       {/* Setting a debounce here so the API isn't spammed */}
       <GooglePlacesAutocomplete
         apiKey={API_KEY}
@@ -44,6 +44,10 @@ function Location(): ReactElement {
             container: (provided: any) => ({
               ...provided,
               marginBottom: 16,
+              marginRight: 16,
+              flex: 1,
+              borderRadius: 8,
+              boxShadow: "var(--shadow)",
             }),
           },
         }}
