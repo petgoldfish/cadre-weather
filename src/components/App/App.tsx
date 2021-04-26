@@ -9,18 +9,18 @@ import FavoriteContextProvider from "../../context/FavoriteContext";
 
 function App() {
   return (
-    <LocationContextProvider>
-      <FavoriteContextProvider>
-        <div className="App flex-column">
-          <Header />
-          <main className="main flex-column">
+    <div className="App flex-column">
+      <Header />
+      <main className="main flex-column">
+        <LocationContextProvider>
+          <FavoriteContextProvider>
             <Location />
             <Favorites />
-            <Weather />
-          </main>
-        </div>
-      </FavoriteContextProvider>
-    </LocationContextProvider>
+          </FavoriteContextProvider>
+          <Weather />
+        </LocationContextProvider>
+      </main>
+    </div>
   );
 }
 

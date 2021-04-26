@@ -9,7 +9,7 @@ function Favorites(): ReactElement {
 
   return (
     <div className="card favorites">
-      <h4 className="favorites__title">Favorites</h4>
+      <h3 className="favorites__title">Favorites</h3>
       {favorites.map((favorite, index) => (
         <p
           className={

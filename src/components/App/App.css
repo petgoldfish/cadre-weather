@@ -51,6 +51,7 @@
 
 [data-reach-tab] {
   flex: 1;
+  font-weight: bold;
 }
 
 [data-reach-tab][data-selected] {

@@ -33,9 +33,10 @@ function Weather(): ReactElement {
 
   return (
     <Tabs className="card flex-column tabs">
+      {location && <h3>{location.address}</h3>}
       <TabList>
-        <Tab>Hourly Forecast</Tab>
-        <Tab>Weekly Forecast</Tab>
+        <Tab>Today</Tab>
+        <Tab>This Week</Tab>
       </TabList>
       <TabPanels>
         <TabPanel>

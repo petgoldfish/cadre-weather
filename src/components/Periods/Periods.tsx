@@ -8,7 +8,7 @@ interface PropTypes {
 
 function Periods({ data }: PropTypes): ReactElement {
   return !data ? (
-    <div>Forecast</div>
+    <div>Select a location to display its forecast.</div>
   ) : (
     <div className="flex periods">
       {data.map((period) => {
